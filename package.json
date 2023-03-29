@@ -1,14 +1,15 @@
 {
-  "name": "coffee-shop-locator",
+  "name": "sandwich-shop-locator",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "PORT=8080 next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "classnames": "^2.3.2",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"

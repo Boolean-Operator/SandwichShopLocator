@@ -1,98 +1,17 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
-
-* {
-  box-sizing: border-box;
+html {
   padding: 0;
   margin: 0;
+  background: url('/static/background3.png');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 100vh;
 }
 
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: #050b52;
 }
 
 a {
@@ -100,8 +19,159 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+* {
+  box-sizing: border-box;
+}
+
+p {
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre {
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  background-image: none;
+  font-weight: 600;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+/* glass-morphism */
+.glass {
+  background: hsla(0, 0%, 100%, 0.4);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+}
+
+.glass:hover {
+  background: hsla(0, 0%, 100%, 0.7);
+  border: 1px solid #fff;
+}
+
+:root {
+  --text-blue: rgba(41, 45, 171, 1);
+  --text-blue-dark: rgba(25, 31, 179, 1);
+  --text-black: rgba(17, 24, 39, 1);
+  --text-white-100: rgba(229, 231, 235, 1);
+  --text-grey-dark: #454545;
+
+  --color-grey-50: hsl(265, 55%, 96%);
+  --color-grey-100: hsl(265, 19%, 88%);
+  --color-grey-200: hsl(265, 7%, 70%);
+  --color-grey-300: hsl(265, 6%, 66%);
+  --color-grey-400: hsl(265, 4%, 57%);
+  --color-grey-500: hsl(265, 3%, 53%);
+  --color-grey-600: hsl(265, 4%, 42%);
+  --color-grey-700: hsl(265, 4%, 31%);
+  --color-grey-800: hsl(276, 5%, 20%);
+  --color-grey-900: hsl(280, 5%, 13%);
+
+  --color-primary-50: #ece7f7;
+  --color-primary-100: #cec5ec;
+  --color-primary-200: #ad9fe0;
+  --color-primary-300: #8b78d5;
+  --color-primary-400: #705bcc;
+  --color-primary-500: #5440c2;
+  --color-primary-600: #4a3bbc;
+  --color-primary-700: #3a33b3;
+  --color-primary-800: #292dab;
+  --color-primary-900: #00229d;
+
+  --color-secondary-50: #fbf3dc;
+  --color-secondary-100: #f5dfa6;
+  --color-secondary-200: #edcb6d;
+  --color-secondary-300: #e5b82f;
+  --color-secondary-400: #e0a900;
+  --color-secondary-500: #db9c00;
+  --color-secondary-600: #dc8f00;
+  --color-secondary-700: #dc7d00;
+  --color-secondary-800: #db6c00;
+  --color-secondary-900: #db4900;
+
+  --color-complementary-50: #fbfce8;
+  --color-complementary-100: #f5f7c5;
+  --color-complementary-200: #eef4a0;
+  --color-complementary-300: #e7ef7a;
+  --color-complementary-400: #e1ea5c;
+  --color-complementary-500: #dbe63e;
+  --color-complementary-600: #ced438;
+  --color-complementary-700: #bcbe30;
+  --color-complementary-800: #aba729;
+  --color-complementary-900: #8e801b;
+
+  --color-analogous1-50: #e1f4fc;
+  --color-analogous1-100: #b4e1f7;
+  --color-analogous1-200: #85cef2;
+  --color-analogous1-300: #5bbbeb;
+  --color-analogous1-400: #43ade7;
+  --color-analogous1-500: #369fe2;
+  --color-analogous1-600: #3291d3;
+  --color-analogous1-700: #2d7fbf;
+  --color-analogous1-800: #296eab;
+  --color-analogous1-900: #214f88;
+
+  --color-analogous2-50: #eee6f5;
+  --color-analogous2-100: #d3c2e7;
+  --color-analogous2-200: #b699d8;
+  --color-analogous2-300: #996fc9;
+  --color-analogous2-400: #844fbd;
+  --color-analogous2-500: #6e2eb1;
+  --color-analogous2-600: #6629ab;
+  --color-analogous2-700: #5920a2;
+  --color-analogous2-800: #4e1a9b;
+  --color-analogous2-900: #3b0a8d;
+  --color-triadic1-50: #f4e5f4;
+  --color-triadic1-100: #e5bfe5;
+  --color-triadic1-200: #d495d5;
+  --color-triadic1-300: #c26ac4;
+  --color-triadic1-400: #b549b7;
+  --color-triadic1-500: #a729ab;
+  --color-triadic1-600: #9925a5;
+  --color-triadic1-700: #87209d;
+  --color-triadic1-800: #761b95;
+  --color-triadic1-900: #581487;
+
+  --color-triadic2-50: #fcebef;
+  --color-triadic2-100: #f9ced5;
+  --color-triadic2-200: #e69ba0;
+  --color-triadic2-300: #da767c;
+  --color-triadic2-400: #e4575d;
+  --color-triadic2-500: #ea4848;
+  --color-triadic2-600: #da4045;
+  --color-triadic2-700: #c8373f;
+  --color-triadic2-800: #bb3138;
+  --color-triadic2-900: #ab292d;
+
+  --color-success-100: #a2f0bc;
+  --color-success-500: #12bd4b;
+
+  --color-error-100: #f1acc9;
+  --color-error-500: #a10c4a;
+
+  --size-1: 0.25rem;
+  --size-2: 0.5rem;
+  --size-3: 0.75rem;
+  --size-4: 1rem;
+  --size-5: 1.25rem;
+  --size-6: 1.5rem;
+  --size-8: 2rem;
+  --size-12: 3rem;
+  --size-16: 4rem;
+  --size-20: 5rem;
+  --size-40: 10rem;
 }
